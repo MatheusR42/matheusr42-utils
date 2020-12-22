@@ -1,0 +1,11 @@
+{
+  "name": "matheusr42-utils",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "matheusr42",
+  "scripts": {
+    "test": "node index.test.js",
+    "prepublish": "npm test"
+  }
+}
