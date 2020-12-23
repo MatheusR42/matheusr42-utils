@@ -1,8 +1,8 @@
 {
   "name": "matheusr42-utils",
-  "version": "2.0.1",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "2.0.2",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "license": "MIT",
   "author": "matheusr42",
   "scripts": {
