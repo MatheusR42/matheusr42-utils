@@ -1,14 +1,11 @@
-const greeter = require('./index')
-
+"use strict";
+var greeter = require('./src/index');
 console.log('Starting tests...');
-
-const resOne = greeter()
+var resOne = greeter();
 if (resOne !== 'Hello User!') {
-  throw new Error('greet not working with default arguments!')
+    throw new Error('greet not working with default arguments!');
 }
-
-
-const restTwo = greeter('Matheus')
+var restTwo = greeter('Matheus');
 if (restTwo !== 'Hello Matheus!') {
-  throw new Error('greet not working with name argument!')
+    throw new Error('greet not working with name argument!');
 }
