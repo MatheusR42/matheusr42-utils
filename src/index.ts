@@ -1,3 +1,3 @@
-module.exports = (name = 'User') => {
+export default (name = 'User') => {
   return `Hello ${name}!`
 }

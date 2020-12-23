@@ -1,6 +1,6 @@
-const greeter = require('./index')
+import greeter from './index'
 
-console.log('Starting tests...');
+console.log('Starting tests...')
 
 const resOne = greeter()
 if (resOne !== 'Hello User!') {
@@ -12,4 +12,4 @@ if (restTwo !== 'Hello Matheus!') {
   throw new Error('greet not working with name argument!')
 }
 
-console.log('All tests passed...');
+console.log('All tests passed...')
