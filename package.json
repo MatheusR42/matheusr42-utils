@@ -1,12 +1,12 @@
 {
   "name": "matheusr42-utils",
   "version": "1.0.1",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "author": "matheusr42",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
-    "test": "node index.test.ts",
+    "dev": "ts-node-dev --respawn --debug --transpile-only src/index.ts ",
+    "test": "node dist/index.test.js",
     "prepublish": "npm test"
   },
   "devDependencies": {

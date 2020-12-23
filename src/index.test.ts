@@ -1,4 +1,4 @@
-const greeter = require('./src/index')
+const greeter = require('./index')
 
 console.log('Starting tests...');
 
@@ -11,3 +11,5 @@ const restTwo = greeter('Matheus')
 if (restTwo !== 'Hello Matheus!') {
   throw new Error('greet not working with name argument!')
 }
+
+console.log('All tests passed...');
