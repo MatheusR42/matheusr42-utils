@@ -5,10 +5,13 @@ const greeter = (name = 'User') => {
   return `Hello ${name}!`
 }
 
-console.log(sum(1, 2) + concat('1', '2'))
+const alo = () => {
+  console.log(sum(1, 2) + concat('1', '2'))
+}
 
 export {
   sum,
   concat,
-  greeter
+  greeter,
+  alo
 }
