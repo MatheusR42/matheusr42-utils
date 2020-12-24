@@ -8,7 +8,8 @@
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored --delete-dir-on-start && tsc --project tsconfig.types.json",
     "dev": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored --delete-dir-on-start --watch",
-    "test": "jest --coverage && coveralls < coverage/lcov.info",
+    "test": "jest --coverage",
+    "coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "prepublishOnly": "yarn test && yarn build"
   },
   "files": [
