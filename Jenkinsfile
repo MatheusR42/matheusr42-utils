@@ -7,20 +7,23 @@ pipeline {
   }
   stages {
     stage('Build') {
-      when {
-        expression { BRANCH_NAME ==~ /(master|main)/ }
-      }
       steps {
         sh 'npm install'
       }
     }
 
     stage('Test') {
+      steps {
+        sh './jenkins/scripts/test.sh'
+      }
+    }
+
+    stage('Deploy') {
       when {
         expression { BRANCH_NAME ==~ /(master|main)/ }
       }
       steps {
-        sh './jenkins/scripts/test.sh'
+        sh './jenkins/scripts/deploy.sh'
       }
     }
 
