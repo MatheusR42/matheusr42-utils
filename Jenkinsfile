@@ -6,6 +6,12 @@ pipeline {
 
   }
   stages {
+    stage('Echo') {
+      steps {
+        sh 'Deploying: $CHANGE_ID'
+      }
+    }
+
     stage('Build') {
       steps {
         sh 'npm install'
