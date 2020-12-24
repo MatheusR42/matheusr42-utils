@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Echo') {
       steps {
-        sh "echo 'Deploying> ${CHANGE_ID}'"
+        sh "echo 'Deploying: ${CHANGE_ID}'"
       }
     }
 
