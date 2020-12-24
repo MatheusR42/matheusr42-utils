@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Echo') {
       when {
-        expression { CHANGE_ID }
+        expression { return CHANGE_ID }
       }
       steps {
         sh "echo 'Deploying: ${CHANGE_ID}'"
