@@ -6,6 +6,7 @@ const greeter = (name = 'User') => {
 }
 
 const alo = () => {
+  console.log('test')
   console.log(sum(1, 2) + concat('1', '2'))
 }
 
