@@ -6,6 +6,18 @@ pipeline {
 
   }
   stages {
+    stage('PR') {
+      when {
+        allOf {
+          expression { env.CHANGE_ID != null }
+          expression { env.CHANGE_TARGET != null }
+        }
+      }
+      steps {
+        echo "Building PR ${CHANGE_ID} - Target ${CHANGE_TARGET}"
+      }
+    }
+
     stage('Echo') {
       when {
         expression { env.CHANGE_ID != null }
