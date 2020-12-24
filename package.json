@@ -8,7 +8,7 @@
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored --delete-dir-on-start && tsc --project tsconfig.types.json",
     "dev": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored --delete-dir-on-start --watch",
-    "test": "jest",
+    "test": "jest --coverage && coveralls < coverage/lcov.info",
     "prepublish": "yarn test && yarn build"
   },
   "files": [
@@ -23,6 +23,7 @@
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.1.0",
     "eslint": "^7.12.1",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
