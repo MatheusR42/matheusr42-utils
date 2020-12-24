@@ -5,7 +5,7 @@ pipeline {
       image 'node:lts-alpine3.10'
     }
     environment {
-        CI = 'true'
+      CI = 'true'
     }
   }
   stages {
@@ -15,9 +15,9 @@ pipeline {
       }
     }
     stage('Test') {
-        steps {
-            sh './jenkins/scripts/test.sh'
-        }
+      steps {
+        sh './jenkins/scripts/test.sh'
+      }
     }
   }
 }
