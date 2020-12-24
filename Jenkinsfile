@@ -21,5 +21,8 @@ pipeline {
   }
   environment {
     CI = 'true'
+    COVERALLS_GIT_BRANCH = 'master'
+    COVERALLS_SERVICE_NAME = 'jenkins'
+    COVERALLS_REPO_TOKEN = credentials('jenkins-coveralls-repo-token')
   }
 }
