@@ -11,10 +11,18 @@ pipeline {
         allOf {
           expression { env.CHANGE_ID != null }
           expression { env.CHANGE_TARGET != null }
+          expression { env.CHANGE_BRANCH != null }
+          // CHANGE_AUTHOR
+          // CHANGE_AUTHOR_DISPLAY_NAME
+          // CHANGE_BRANCH
+          // CHANGE_ID
+          // CHANGE_TARGET
+          // CHANGE_TITLE
+          // CHANGE_URL
         }
       }
       steps {
-        echo "Building PR ${CHANGE_ID} - Target ${CHANGE_TARGET}"
+        echo "Building PR ${CHANGE_ID} - Branch ${CHANGE_BRANCH} - Target ${CHANGE_TARGET}"
       }
     }
 
