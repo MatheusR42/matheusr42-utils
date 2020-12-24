@@ -1,4 +1,4 @@
-import greeter from '../index'
+import { greeter } from '../index'
 
 test('it should work with default arguments', () => {
   const resOne = greeter()
