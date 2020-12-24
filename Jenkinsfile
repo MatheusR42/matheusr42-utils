@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Echo') {
       when {
-        expression { return CHANGE_ID }
+        expression { env.CHANGE_ID != null }
       }
       steps {
         sh "echo 'Deploying: ${CHANGE_ID}'"
